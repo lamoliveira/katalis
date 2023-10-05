@@ -1,0 +1,381 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Katalis</title>
+    <link href="http://www.katalis.com.br/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="http://www.katalis.com.br/css/default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="http://www.katalis.com.br/css/nivo-slider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="http://www.katalis.com.br/js/jquery-1.9.0.min.js"></script>
+    <script src="http://www.katalis.com.br/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.9.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        window.addEventListener("load", mediaSizer);
+        //window.addEventListener("resize", mediaSizer);
+        // Listeners that will react when the page first loads or is resized.
+        // If any of these events take place the mediaSizer() function executes.
+
+        var vizList = [
+
+            "https://public.tableau.com/views/resultadokatalis/AcompanhamentodeResultado?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/HUMANRESOURCES-HRExpensesDashboardBrasilkatalis/Cockpit?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+            "https://demodot.serverhealthcheck.tableautools.com/PrevistoxRealizado_16823618332060/AnliseMensal/919501ce-f45d-4bf7-994f-5d6b01f4f3f9/fc46a54d-1c89-40a9-a6d6-fb657bdfd8bd",
+            "https://public.tableau.com/views/FinanasCorporativas-PainelDemonstrativoFinanceiroclearsale/Cockpit-Finance?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/2-Templatekatalis/Template?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/3-Exemplokatalis/DashExemplo?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/Howhastheworldchangedsince1962/WorldIndicators?:language=en-US&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/Insurance-FraudulentClaims/ExecutiveSummary?:language=en-US&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/RiskDashboard_16131403284700/ExecutiveSummary?:language=en-US&:toolbar=n&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/FacebookAdsDashboard_15566377846980/ExecutiveSummary?:language=en-US&:toolbar=n&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/NPS-NetPromoterScoreDashboard/ExecutiveSummary?:language=en-US&:display_count=n&:origin=viz_share_link",
+
+            "https://public.tableau.com/views/SpendAnalyticsDashboard_16056925975720/Home?:apiInternalVersion=1.131.0&:disableUrlActionsPopups=n&navSrc=Opt&:embed=y&navType=0&:suppressDefaultEditBehavior=n&mobile=n&:toolbar=n&:hideEditButton=y&:hideEditInDesktopButton=n&:jsdebug=n&:apiExternalVersion=3.6.0&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/1-DesigningEffectiveDashboardsPublic/Intro?:language=en-US&:display_count=n&:origin=viz_share_link",
+            "https://public.tableau.com/views/Embedded_Analytics/Introduo?:language=en-US&:display_count=n&:origin=viz_share_link"
+
+
+
+        ];
+        // Array of Tableau Server URLs for dashboard or sheet navigation.
+
+        var viz,
+            vizLen = vizList.length,
+            vizCount = 0,
+            devType,
+            vHideTabs = true,
+            vHideToolbar = true;
+        var options = {
+            device: devType,
+        };
+
+
+        function mediaSizer() {
+            // Determines the correct viz layout according to screen sizes.
+            if (window.matchMedia("(max-width: 480px)").matches) {
+                //alert("I am a phone layout!");
+                devType = 'phone';
+                vWidth = 450;
+                vHeight = 2000;
+                //options.device = 'phone';
+            } else if (window.matchMedia("(max-width: 980px)").matches) {
+                //alert("I am a tablet layout!");
+                devType = 'tablet';
+                vWidth = 980;
+                //options.device = 'tablet';
+            } else {
+                //alert("I am a desktop layout!");
+                devType = 'desktop';
+                vWidth = 1666;
+                vHeight = 800;
+                //options.device = 'desktop';
+            }
+            console.log("devtype: " + devType)
+            console.log("launch0")
+            launchViz(0);
+            console.log("launch1")
+            vHeight = 800;
+            launchViz(1);
+            vHeight = 1000;
+            console.log("launch2")
+
+            //launchViz(2);
+            console.log("launch3")
+            // launchViz(3);
+            launchViz(4);
+            vHideToolbar = true;
+            vHideTabs = true;
+            launchViz(5);
+            launchViz(6);
+
+
+            vHideToolbar = false;
+            vHideTabs = false;
+            launchViz(7);
+            launchViz(8);
+            launchViz(9);
+
+            launchViz(10);
+            vHeight = 1000;
+            launchViz(11);
+            launchViz(12);
+            launchViz(13);
+
+            // Launches the viz again with the new sizing at the current index of vizList.
+        }
+
+
+        function launchViz(vizNav) {
+            // JS object targeting a div in the html document. (vizNav) will pass navigation values to move back and forth across vizList.
+            console.log("vizContainer" + vizNav)
+            console.log("devtype: " + devType)
+            var vizDiv = document.getElementById("vizContainer" + vizNav),
+                // Will embed the visualization on a div with id="VizContainer"
+                options = {
+                    device: devType,
+                    width: vWidth,
+                    height: vHeight,
+                    hideTabs: vHideTabs,
+                    hideToolbar: vHideToolbar,
+                    onFirstInteractive: function () {
+                        listenToMarksSelection();
+                    }
+                };
+
+
+            var vizURL = vizList[vizNav];
+            // Dynamic URL returning the string from vizList at index = vizNav (viz to be displayed).
+
+            try {
+                // Initializes the viz from the array with desired options. 
+                viz = new tableau.Viz(vizDiv, vizURL, options);
+                if (!viz) throw 'viz not initialized'
+            }
+            catch (err) {
+                alert(err);
+            }
+            finally {
+                console.log('whatever')
+                console.count('initViz')
+            }
+
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap col-12">
+        <div class="wrapper-box col-12">
+            <div class="header col-4">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="http://www.katalis.com.br/index.html"><img
+                                src="http://www.katalis.com.br/images/logo.jpg" alt="" /></a>
+                    </div>
+                    <div id="cssmenu">
+                        <!--ul>
+					   <li class="has-sub"><a href="http://www.katalis.com.br/quem_somos.html"><span>Quem Somos</span></a></li>
+					   <li class="last"><a href="http://www.katalis.com.br/objetivos.html"><span>Objetivos</span></a></li>
+					   <li class="last"><a href="http://www.katalis.com.br/contato.html"><span>Contato</span></a></li>
+					</ul-->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="banner  col-4">
+                <div id="wrapper">
+                    <div class="slider-wrapper theme-default">
+                        <div id="slider" class="nivoSlider">
+                            <img src="http://www.katalis.com.br/images/banner_home.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer col-4">
+
+                    <div class="logos"><a href="http://www.katalis.com.br/http://www.artesanalfarmacia.com.br/"
+                            target="_blank"> <img src="http://www.katalis.com.br/images/rodape1.jpg"></a></div>
+                    <div class="logos"><a href="http://www.katalis.com.br/http://www.farmaciaartpharma.com.br/"
+                            target="_blank"> <img src="http://www.katalis.com.br/images/rodape2.jpg"></a></div>
+                    <div class="logos"><a href="http://www.katalis.com.br/http://www.dermatus.com.br/" target="_blank">
+                            <img src="http://www.katalis.com.br/images/rodape10.jpg"></a></div>
+                    <div class="logos"><a href="http://www.katalis.com.br/http://www.drogaderma.com.br/"
+                            target="_blank"> <img src="http://www.katalis.com.br/images/rodape6.jpg"></a></div>
+                    <div class="logos"><a href="http://www.katalis.com.br/http://www.equilibrio.com.br/"
+                            target="_blank"><img src="http://www.katalis.com.br/images/equilibrio.png"></a></div>
+                    <!--div class="logos"><a href="http://www.katalis.com.br/http://www.essencialdf.com/" target="_blank"> <img src="http://www.katalis.com.br/images/rodape4.jpg"></a></div>
+		  <div class="logos"><a href="http://www.katalis.com.br/http://farmaformula.com.br/" target="_blank"> <img src="http://www.katalis.com.br/images/rodape5.jpg"></a></div-->
+                    <div class="logos"><a href="http://www.katalis.com.br/http://www.officilab.com.br/" target="_blank">
+                            <img src="http://www.katalis.com.br/images/rodape7.jpg"></a></div>
+                    <div class="logos"><a href="http://www.katalis.com.br/http://www.almaderma.com.br/" target="_blank">
+                            <img src="http://www.katalis.com.br/images/rodape8.jpg"></a></div>
+                    <div class="logos"><a href="http://www.katalis.com.br/#" target="_blank"> <img
+                                src="http://www.katalis.com.br/images/rodape9.png"></a></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+</body>
+
+
+<footer>
+
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Este é um micro-site criado somente para ilustrar o que seria o Tableau embedded no seu site. Somente
+                alguns exemplos para inspira-los na avaliação do Tableau e para conhecermos melhor o seu use case</p>
+            <p> Todos os dashboards apresentados contem dados ficticios para fins educacionais </p>
+            <div id="vizContainer0"></div>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard que acompanha despesas de recursos humanos. Voce pode encontrar esse dashboard nos
+                Accelerators Tableau</p>
+            <p>Os aceleradores do Tableau são painéis pré-criados projetados para ajudar você a obter um impulso inicial
+                na análise de dados.</p>
+            <p>Adaptados a setores específicos e aplicativos corporativos, os Aceleradores são criados com dados de
+                amostra que você pode trocar por seus próprios dados,</p>
+            <p> permitindo que você descubra insights com configuração mínima.</p>
+            <div id="vizContainer1"></div>
+        </div>
+    </div>
+    <!-- <div style="text-align: center;">
+<div style="display: inline-block;">
+    <p> - </p>
+    <p> Abaixo um dashboard que acompanha Real x Orçado de projetos e segue o conceito de guided analytics e você pode ir analisando e fazendo drill down</p>
+     
+<div id="vizContainer2"></div>
+</div>
+</div> -->
+    <!-- <div style="text-align: center;">
+<div style="display: inline-block;">
+    <p> - </p>
+    <p> Abaixo um dashboard para ánalise de um demonstrativo financeiro. Também disponível nos Accelerators Tableau</p>
+    <p>Os aceleradores do Tableau são painéis pré-criados projetados para ajudar você a obter um impulso inicial na análise de dados.</p>
+    <p>Adaptados a setores específicos e aplicativos corporativos, os Aceleradores são criados com dados de amostra que você pode trocar por seus próprios dados,</p>
+        <p> permitindo que você descubra insights com configuração mínima.</p>   
+<div id="vizContainer3"></div>
+</div>
+</div> -->
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard de um exemplo de template para que todos os usuários tenham facilidade para criar
+                novos dashs e seguindo os padrões da empresa</p>
+
+            <div id="vizContainer4"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard usando o template ilustrado no dash anterior</p>
+
+            <div id="vizContainer5"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard mais lúdico disponível no Tableau Public. Voce pode acompanhar a animação clicando
+                no triangulo no canto inferior direito</p>
+            <p>O Tableau Public é uma plataforma gratuita para explorar, criar e compartilhar publicamente visualizações
+                de dados online. </p>
+            <p> Com o maior repositório de visualizações de dados do mundo para aprender, o Tableau Public facilita o
+                desenvolvimento de habilidades de dados.</p>
+
+            <div id="vizContainer6"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard para ánalise de reivindicações fraudulentas de Seguro. Também disponível nos
+                Accelerators Tableau</p>
+            <p>Os aceleradores do Tableau são painéis pré-criados projetados para ajudar você a obter um impulso inicial
+                na análise de dados.</p>
+            <p>Adaptados a setores específicos e aplicativos corporativos, os Aceleradores são criados com dados de
+                amostra que você pode trocar por seus próprios dados,</p>
+            <p> permitindo que você descubra insights com configuração mínima.</p>
+            <div id="vizContainer7"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Avalie sua exposição atual a riscos.
+                Monitore seus riscos e concentre-se nas principais prioridades.
+                Avalie sua eficácia na eliminação/mitigação de riscos</p>
+            <p>Os aceleradores do Tableau são painéis pré-criados projetados para ajudar você a obter um impulso inicial
+                na análise de dados.</p>
+            <p>Adaptados a setores específicos e aplicativos corporativos, os Aceleradores são criados com dados de
+                amostra que você pode trocar por seus próprios dados,</p>
+            <p> permitindo que você descubra insights com configuração mínima.</p>
+            <div id="vizContainer8"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+
+            <p> - </p>
+            <p> Abaixo um dashboard para ánalise de facebook ads. Também disponível nos Accelerators Tableau</p>
+            <p>Avalie e melhore o desempenho de suas campanhas de marketing com o Facebook Ads.
+                Identifique as campanhas mais impactantes.
+                Mergulhe fundo na eficiência da campanha em: Reconhecimento, Engajamento, Conversão.</p>
+            <p>Melhorar o retorno sobre o investimento.
+                Audite os resultados da otimização da campanha ao longo do tempo.</p>
+            <div id="vizContainer9"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard para acompanhamento de NPS. Também disponível nos Accelerators Tableau</p>
+            <p>Entenda como os clientes avaliam suas experiências com sua empresa</p>
+            <p>Como a qualidade da experiência de seus clientes evoluiu ao longo do tempo</p>
+            <div id="vizContainer10"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p> - </p>
+            <p> Abaixo um dashboard para acompanhamento de contratos. Também disponível nos Accelerators Tableau</p>
+            <p>Avalie e monitore seu volume de gastos
+                Entenda melhor sua alocação de gastos em categorias de gastos e fornecedores</p>
+            <p>Monitore e melhore os KPIs</p>
+            <div id="vizContainer11"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p>-</p>
+            <p> O dashboard a seguir é um exemplo de webinar que utilizamos no inicio da jornada para criação de cultura
+                de dados. </p>
+            <p>Tem muita informação relevante para que voce possa conhecer um pouco mais sobre a plataforma Tableau e
+                como te ajudamos a construir cultura de dados/>
+            <p>-</p>
+            <div id="vizContainer12"></div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">
+            <p>-</p>
+            <p> O dashboard a seguir é um exemplo de webinar sobre embedded. </p>
+            <p>Tem muita informação relevante para que voce possa conhecer um pouco mais sobre embedded</p>
+            <p>-</p>
+            <div id="vizContainer13"></div>
+        </div>
+    </div>
+   
+</footer>
+
+
+</html>
